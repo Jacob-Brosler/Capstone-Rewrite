@@ -152,30 +152,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Collidable.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Interactable.cpp" />
     <ClCompile Include="Keybind.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapPlayer.cpp" />
-    <ClCompile Include="MovingCollidable.cpp" />
-    <ClCompile Include="Quadtree.cpp" />
+    <ClCompile Include="Registry.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ScrollBar.cpp" />
+    <ClCompile Include="UIDefinition.cpp" />
+    <ClCompile Include="UISprite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Collidable.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Interactable.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="Keybind.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapPlayer.h" />
-    <ClInclude Include="MovingCollidable.h" />
-    <ClInclude Include="Quadtree.h" />
+    <ClInclude Include="Registry.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="ScrollBar.h" />
+    <ClInclude Include="UIDefinition.h" />
+    <ClInclude Include="UISprite.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Capstone_Rewrite.rc" />

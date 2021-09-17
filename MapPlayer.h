@@ -2,20 +2,27 @@
 #define MAPPLAYER_H
 
 #include <SFML/System.hpp>
-#include "MovingCollidable.h"
+#include "Collidable.h"
 
-class MapPlayer : public MovingCollidable, public sf::Drawable
+class MapPlayer : public sf::Drawable
 {
 private:
 	sf::RectangleShape renderShape;
+	sf::Vector2f mapPosition;
+	int movespeed;
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 public:
+
 	MapPlayer(sf::Vector2f topLeft, sf::Vector2f size);
 	~MapPlayer();
 
-	void Update();
-	void Move(sf::Vector2f amount);
+	int GetMovespeed();
+	sf::Vector2f GetDrawnPos();
+	sf::Vector2f GetTopLeft();
+	sf::Vector2f GetBottomRight();
+	void SetPosition(sf::Vector2f pos);
+	void Move(sf::Vector2f movement);
 };
 
 #endif

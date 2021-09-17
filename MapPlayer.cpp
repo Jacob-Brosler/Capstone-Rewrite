@@ -1,24 +1,46 @@
 #include "MapPlayer.h"
 
-MapPlayer::MapPlayer(sf::Vector2f topLeft, sf::Vector2f size) : MovingCollidable(topLeft, size)
+MapPlayer::MapPlayer(sf::Vector2f topLeft, sf::Vector2f size)
 {
 	renderShape.setPosition(topLeft);
 	renderShape.setSize(size);
 	renderShape.setFillColor(sf::Color::Red);
+	movespeed = 200;
+	mapPosition = sf::Vector2f(0, 0);
 }
 
 MapPlayer::~MapPlayer()
 {
 }
 
-void MapPlayer::Update()
+int MapPlayer::GetMovespeed()
 {
+	return movespeed;
 }
 
-void MapPlayer::Move(sf::Vector2f amount)
+sf::Vector2f MapPlayer::GetDrawnPos()
 {
-	renderShape.move(amount);
-	MovingCollidable::Move(amount);
+	return renderShape.getPosition();
+}
+
+sf::Vector2f MapPlayer::GetTopLeft()
+{
+	return mapPosition;
+}
+
+sf::Vector2f MapPlayer::GetBottomRight()
+{
+	return mapPosition + renderShape.getSize();
+}
+
+void MapPlayer::SetPosition(sf::Vector2f pos)
+{
+	mapPosition = pos;
+}
+
+void MapPlayer::Move(sf::Vector2f movement)
+{
+	mapPosition += movement;
 }
 
 void MapPlayer::draw(sf::RenderTarget& target, sf::RenderStates states) const

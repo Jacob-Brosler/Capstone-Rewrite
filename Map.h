@@ -9,11 +9,17 @@ class Map
 {
 private:
 	sf::Vector2i mapSize;
+	std::string mapTexture;
 	int* map;
-	std::vector<Collidable> collision;
 public:
-	Map();
+	Map(int mapSizeX, int mapSizeY, int* map, std::string tilemap);
 	~Map();
+
+	std::string GetTilemapName();
+	int GetWidth();
+	int GetHeight();
+	int GetCell(int x, int y);
+	void ChangeCell(int x, int y, int newVal);
 };
 
 #endif

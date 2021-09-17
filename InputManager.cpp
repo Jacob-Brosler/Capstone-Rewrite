@@ -27,8 +27,10 @@ void InputManager::Update(sf::Event keyboardEvent)
 
 void InputManager::EndFrame()
 {
-    pressedKeys.clear();
-    releasedKeys.clear();
+    if (pressedKeys.size() != 0)
+        pressedKeys.clear();
+    if (releasedKeys.size() != 0)
+        releasedKeys.clear();
 }
 
 bool InputManager::TestKeybind(PlayerKeybinds keybind)
@@ -43,13 +45,15 @@ bool InputManager::TestKeybind(PlayerKeybinds keybind)
         if (sf::Keyboard::isKeyPressed(key))
             return false;
     }
-    std::sort(pressedKeys.begin(), pressedKeys.end());
+    if(pressedKeys.size() != 0)
+        std::sort(pressedKeys.begin(), pressedKeys.end());
     for(sf::Keyboard::Key key : keybinds[keybind].triggerKeyPressed)
     {
         if (std::find(pressedKeys.begin(), pressedKeys.end(), key) != pressedKeys.end())
             return true;
     }
-    std::sort(releasedKeys.begin(), releasedKeys.end());
+    if (releasedKeys.size() != 0)
+        std::sort(releasedKeys.begin(), releasedKeys.end());
     for (sf::Keyboard::Key key : keybinds[keybind].triggerKeyReleased)
     {
         if (std::find(releasedKeys.begin(), releasedKeys.end(), key) != releasedKeys.end())

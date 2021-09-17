@@ -37,6 +37,18 @@
     <Filter Include="Header Files\Input">
       <UniqueIdentifier>{9da2b752-07ad-4b4d-86a4-509687d0fe9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{0a51e33a-7f16-446d-9433-b3e68f55ce70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{004bff76-60bb-4b57-990f-69602f366294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Interactables">
+      <UniqueIdentifier>{2457d5fb-f53d-438c-99d6-6cca7688868f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Interactables">
+      <UniqueIdentifier>{915f0f29-46fe-476e-8d35-9020980afc86}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -45,13 +57,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Collidable.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Quadtree.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
@@ -69,24 +75,36 @@
     <ClCompile Include="Keybind.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>
-    <ClCompile Include="MovingCollidable.cpp">
-      <Filter>Source Files\Map</Filter>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDefinition.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UISprite.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\UI\Interactables</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollBar.cpp">
+      <Filter>Source Files\UI\Interactables</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Registry.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Collidable.h">
-      <Filter>Header Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Quadtree.h">
       <Filter>Header Files\Map</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
@@ -104,8 +122,29 @@
     <ClInclude Include="Keybind.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
-    <ClInclude Include="MovingCollidable.h">
-      <Filter>Header Files\Map</Filter>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDefinition.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UISprite.h">
+      <Filter>Header Files\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Header Files\UI\Interactables</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\UI\Interactables</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollBar.h">
+      <Filter>Header Files\UI\Interactables</Filter>
+    </ClInclude>
+    <ClInclude Include="Registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
